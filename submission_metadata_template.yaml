@@ -1,0 +1,55 @@
+team_name: "your-team-name-here"
+
+primary_contact:
+  name: "Full Name"
+  email: "primary@example.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "Member 1"
+    email: "member1@example.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Local CPU machine"
+  cpu_cores: 4
+  ram_gb: 16
+  python_version: "3.10"
+  os: "Ubuntu 22.04"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Claude used for architecture discussion and code review.
+  No candidate data was fed to any LLM.
+  Ranking is deterministic rule-based with no LLM calls at inference time.
+
+methodology_summary: |
+  Multi-signal ranker with 7 explicit scoring components reflecting the JD's
+  stated and implied requirements. Title/role alignment (26%) acts as a hard
+  gate against keyword stuffers — a Marketing Manager with AI skills scores
+  near zero regardless of skill keywords. Skills scoring (26%) uses a trust
+  multiplier: proficiency × duration_months × endorsements × platform assessment,
+  structured into 7 JD-required buckets (embeddings, vector DB, ranking/IR,
+  LLM/NLP, ML frameworks, MLOps/eval, Python). Experience component (24%)
+  scores YoE sweet-spot (5–9yr), product-company ratio, and production ML
+  evidence in role descriptions. Availability (14%) incorporates last_active
+  recency, open_to_work_flag, recruiter_response_rate, and notice_period.
+  Honeypot detection removes 7,585 impossible profiles before ranking.
+  Total runtime ~40 seconds on CPU for 100K candidates.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
