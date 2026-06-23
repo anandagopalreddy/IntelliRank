@@ -1,16 +1,16 @@
-team_name: "your-team-name-here"
+team_name: "IntelliRank"
 
 primary_contact:
-  name: "Full Name"
-  email: "primary@example.com"
-  phone: "+91-XXXXXXXXXX"
+  name: "Ananda Gopal Reddy Manne"
+  email: "anandagopalreddym@gmail.com"
+  phone: "+91-7989805745"
 
 team_members:
   - name: "Member 1"
     email: "member1@example.com"
     role: "ML Engineer"
 
-github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
+github_repo: "https://github.com/anandagopalreddy/IntelliRank"
 sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
