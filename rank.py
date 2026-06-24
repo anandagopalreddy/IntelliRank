@@ -747,10 +747,7 @@ def main():
 
     write_submission(ranked, args.out)
     print(f"\nSubmission written to {args.out}", file=sys.stderr)
-    # print(f"\nTop 10:", file=sys.stderr)
-    # for i, r in enumerate(ranked[:10]):
-    #     print(f"  #{i+1} {r['candidate_id']} {r['score']:.4f} | {r['reasoning'][:90]}", file=sys.stderr)
-    # print(f"\nSubmission written to {args.out}", file=sys.stderr)
+  
 
 
 if __name__ == "__main__":
