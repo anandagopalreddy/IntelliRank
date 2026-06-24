@@ -15,7 +15,7 @@ team_members:
     role: "Software Engineer"
 
 github_repo: "https://github.com/anandagopalreddy/IntelliRank"
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+sandbox_link: "https://colab.research.google.com/drive/1GZ0dC-Hue75nCIvSbbpcWMWW58Uz3O2z?usp=sharing"
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
 compute:
